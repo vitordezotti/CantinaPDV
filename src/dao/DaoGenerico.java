@@ -9,6 +9,7 @@ public class DaoGenerico {
     protected Connection connection;
 
     public DaoGenerico() {
+    	conectar();
     }
     
    /* public void conectar(){    

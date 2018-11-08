@@ -9,7 +9,6 @@ public class Aluno extends Pessoa {
         private Float saldo;
 	
 	public Aluno() {
-		nome="Tiag";
 	}
 
 	public Integer getCodAluno() {
