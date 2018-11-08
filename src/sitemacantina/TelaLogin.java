@@ -171,18 +171,17 @@ public class TelaLogin extends javax.swing.JFrame {
         FuncionarioDao fdao = new FuncionarioDao();
          TelaPrincipal pl = new TelaPrincipal();
        
-        //try {
-            //if(fdao.checkLogin(tfLogin.getText(), pfSenha.getText())){
-            if(true){
-                JOptionPane.showMessageDialog(this, "Bem vindo!");
-                pl.setVisible(true);
-                this.dispose();
-            }else{
-                JOptionPane.showMessageDialog(this, "Acesso Negado!");
-            }//} catch (SQLException ex) {
-        //    Logger.getLogger(TelaLogin.class.getName()).log(Level.SEVERE, null, ex);
-        //}
-    }//GEN-LAST:event_btEntrarActionPerformed
+         try {
+             if(fdao.checkLogin(tfLogin.getText(), pfSenha.getText())){
+                 JOptionPane.showMessageDialog(this, "Bem vindo!");
+                 pl.setVisible(true);
+                 this.dispose();
+             }else{
+                 JOptionPane.showMessageDialog(this, "Acesso Negado!");
+             }} catch (SQLException ex) {
+             Logger.getLogger(TelaLogin.class.getName()).log(Level.SEVERE, null, ex);
+         }
+     }//GEN-LAST:event_btEntrarActionPerformed
 
     private void pfSenhaKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_pfSenhaKeyPressed
         FuncionarioDao fdao = new FuncionarioDao();
